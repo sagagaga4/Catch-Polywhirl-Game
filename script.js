@@ -8,7 +8,7 @@ const counterDisplay = document.querySelector(".count");
 //////////////////////////////global variables characters////////////////////////
 let counter = 0; // Counter for the number of polywhirls clicked
 
-//* JUMP */
+//_______________________________*CHARACTER*____________________________________/
 
 //////////////////////////////variable decleartions///////////////////////////// 
 
