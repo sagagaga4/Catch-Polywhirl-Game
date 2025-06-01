@@ -1,4 +1,5 @@
 ### Polywhirl Collector Game
+![image](https://github.com/user-attachments/assets/ccaac9ee-03fd-4c10-afad-e5c7e8205cf5)
 
 A browser-based game built with HTML, CSS, and JavaScript, where players control Pikachu to collect Polywhirls by clicking them to earn points while avoiding falling Pokéballs. The game features smooth character movement, collision detection, and a score counter with a 200ms grow animation when points are added.
 
