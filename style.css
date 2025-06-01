@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0b0b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #ffffffdf;
+    text-align: center;
+    line-height: 1.2; /* Adjusted for compactness */
+}
+
+.container {
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./photos/heaven.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 50px;
+    border: 5px solid rgb(5, 8, 11);
+    overflow: hidden; /* Ensure content stays within container */
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(23, 100, 214, 0.3);
+    border-radius: 50px;
+    z-index: 1;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.pikachu {
+    position: absolute;
+    left: 50px;
+    bottom: 5px;
+    width: 25%;
+    height: 25%;
+    background: url('./photos/pika-pixel.png') no-repeat;
+    background-size: contain;
+    image-rendering: pixelated;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.pokeball {
+    position: absolute;
+    left: 20px;
+    bottom: 100%;
+    width: 40px;
+    height: 40px;
+    background: url('./photos/pokeball.png') no-repeat;
+    image-rendering: pixelated;
+    background-size: contain;
+    z-index: 2;
+}
+
+.polywhirl {
+    position: absolute;
+    left: 50px;
+    bottom: 50%;
+    width: 50px;
+    height: 50px;
+    background: url('./photos/polywhirl.png') no-repeat;
+    background-size: contain;
+    image-rendering: pixelated;
+    z-index: 3;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.polywhirl:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.count {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffffdd;
+    position: absolute;
+    top: 50px;
+    left: 35%;
+    z-index: 3;
+    line-height: 1.5;
+    padding: 5px 10px;
+    border-radius: 25px;
+    transition: transform 0.2s ease-in-out; /* Smooth scaling animation */
+}
+
+.count-grow {
+    transform: scale(1.5); /* Enlarge text by 1.5x */
+}
+
+.lifebar {
+    background-image: url('./photos/gifs/diamond.gif') no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    left: 10px;
+}
