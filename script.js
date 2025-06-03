@@ -82,7 +82,6 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
-
 ////////////////////////////Character Movement Functions///////////////////////////// 
 
 // Update character function to handle movement and jumping
