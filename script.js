@@ -7,9 +7,8 @@ const counterDisplay = document.querySelector(".count");
 
 //////////////////////////////global variables characters////////////////////////
 let counter = 0; // Counter for the number of polywhirls clicked
-
-//_______________________________*CHARACTER*____________________________________/
-
+const catchAudio = new Audio('./sounds/wah.wav');
+const hitAudio = new Audio('./sounds/UUU.wav');
 //////////////////////////////variable decleartions///////////////////////////// 
 
 // Initial character position and state
@@ -204,9 +203,10 @@ function checkCollision() {
     );
     
     if (colliding) {
+        hitAudio.play(); // Play the hit sound
         // Change to red Pikachu
         character.style.backgroundImage = "url('./photos/redpika-pixel.png')";
-        
+       
         // Optional: Reset back to normal after some time
         setTimeout(() => {
             character.style.backgroundImage = "url('./photos/pika-pixel.png')";
@@ -236,10 +236,10 @@ const maxPolySpeed = 0.5; // Maximum speed for polywhirl
 document.addEventListener('click', (event) => {
     if (event.target.id === 'poly') {
         console.log("Polywhirl clicked!"); // Debug to confirm click
+        catchAudio.play(); // Play the catch sound
         counter++; // Increment the counter
         counterDisplay.textContent = `Poly Bank: ${counter}`; // Update the counter display
-
-        poly.style.backgroundImage = "url('./photos/gifs/energyball.gif')";
+        poly.style.backgroundImage = "url('./photos/gifs/life.gif')";
         poly.style.transition = 'background-image 0.5s ease-in-out';
         counterDisplay.classList.add('count-grow'); // Apply grow effect
         setTimeout(() => {
@@ -247,10 +247,11 @@ document.addEventListener('click', (event) => {
         }, 150);
         // Reset to original image after 0.5 seconds
         setTimeout(() => {
-            poly.style.backgroundImage = "url('./photos/polywhirl.png')";
+            poly.style.backgroundImage = "url('./photos/mis.png')";
         }, 500);
     }
 });
+
 
 ///////////////////////////////Polywhirl Functions///////////////////////////////
 
